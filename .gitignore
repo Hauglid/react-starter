@@ -101,7 +101,7 @@ jspm_packages
 *.tgz
 
 #compile
-www
+www/bundle.js
 
 ### Git ###
 *.orig
