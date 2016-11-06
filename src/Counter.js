@@ -9,18 +9,19 @@ class Counter extends React.Component {
         this.state = {
             count: 0,
         };
+        this.increaseCounter = this.increaseCounter.bind(this);
+    }
+
+    increaseCounter(){
+         this.setState({count: this.state.count + 1});
     }
 
     render() {
         return (
-            <button
-        onClick={() => {
-            this.setState({ count: this.state.count + 1 });
-        }}
-    >
-        Count: {this.state.count}
-    </button>
-    );
+            <button onClick={this.increaseCounter} >
+                Count: {this.state.count}
+            </button>
+        );
     }
 }
 export default Counter;
