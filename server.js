@@ -6,7 +6,6 @@ var app = express();
 
 var compiler = webpack(webpackConfig);
 
-app.use(express.static(__dirname + '/www'));
 
 app.use(webpackDevMiddleware(compiler, {
     hot: true,
@@ -17,6 +16,8 @@ app.use(webpackDevMiddleware(compiler, {
     },
     historyApiFallback: true,
 }));
+
+app.use(express.static(__dirname + '/www'));
 
 var server = app.listen(3000, function() {
     var host = server.address().address;
