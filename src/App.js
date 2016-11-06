@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
-import Counter from './Counter'
+import React, {Component} from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Counter from './Counter';
+import Header from "./Header";
 
-export default class App extends Component {
+
+export default class App extends React.Component {
     render() {
-        return(
-            <div>
-                <Counter/>
-                <Counter/>
-                <Counter/>
-            </div>
+        return (
+            <MuiThemeProvider>
+                <div>
+                    <Header/>
+                    <Counter/>
+
+                </div>
+
+            </MuiThemeProvider>
 
         );
     }

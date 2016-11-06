@@ -1,5 +1,5 @@
 import React from 'react';
-
+import RaisedButton from "material-ui/RaisedButton";
 /**
  * A counter button: tap the button to increase the count.
  */
@@ -19,9 +19,9 @@ class Counter extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.increaseCounter} >
+                <RaisedButton onClick={this.increaseCounter} >
                     Count: {this.state.count}
-                </button>
+                </RaisedButton>
             </div>
         );
     }
