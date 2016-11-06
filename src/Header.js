@@ -14,7 +14,7 @@ export default class Header extends React.Component {
                 title="Title"
                 iconClassNameRight="muidocs-icon-navigation-expand-more"
                 iconElementRight={<Search/>}
-                
+
             />
         )
     };
