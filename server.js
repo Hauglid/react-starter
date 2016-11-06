@@ -15,14 +15,14 @@ app.use(webpackDevMiddleware(compiler, {
     publicPath: '/',
     stats: {
         colors: true,
-        chunks: false
+        chunks: false,
     },
     historyApiFallback: true,
 }));
 
 app.use(webpackHotMiddleware(compiler, {
     log: console.log,
-    path: "/__webpack_hmr",
+    path: '/__webpack_hmr',
     heartbeat: 10 * 1000,
 }));
 
